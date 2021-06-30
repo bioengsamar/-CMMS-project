@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border:
+   1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<form action="/ppm_laryngo" method="POST">
+<h2> PPM Report</h2>
+
+<table>
+  <tr>
+    <th>Equipment type</th>      
+    <th>Serial No.</th>
+    <th>Date</th>
+    <th>Maintenance</th>
+    <th>Equipment Failure found</th>
+    <th>Description of equipment failure</th>
+    <th>Cause of failure(if know)</th>
+    <th>Part of machine to be maintained</th>
+    <th>time required</th>
+    <th>Spare parts replaced</th>
+    <th>Engineer Signature</th>
+    <th>Comments </th>
+  </tr>
+<tr>
+    <td> Ear pressure gauge </td>
+    <td> IM/DE/4/00354 </td>
+  
+       <td>  <input type="text" name="bday" value="None">
+   
+   <!--<input type="checkbox" name="item" value="Ear pressure gauge">-->
+        
+  <td>   <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+          <input type="hidden" name="item" value="Ear pressure gauge">
+        <input type="hidden" name="it" value="IM/DE/4/00354">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+      <td>  <input type="text" name="Part of machine to be maintained" value="None">
+            <td>  <input type="text" name="time required" value="None">
+              <td>  <input type="text" name="Spare parts replaced" value="None">
+              <td>  <input type="text" id="signature" name="signature" value="None">
+              <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+      <td> Nose and pharyngoscope </td>
+    <td>9290</td>
+  
+        <td>  <input type="text" name="bday" value="None">
+  <td>    <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+        <input type="hidden" name="item" value="Nose and pharyngoscope">
+        <input type="hidden" name="it" value="9290">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure"  value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+      <td>  <input type="text" name="Part of machine to be maintained" value="None">
+      <td>  <input type="text" name="time required" value="None">
+      <td>  <input type="text" name="Spare parts replaced" value="None">
+      <td>  <input type="text" id="signature" name="signature" value="None">
+      <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+     <td> Electronic audiometer </td>
+    <td>aa073531</td>
+  
+        <td>  <input type="text" name="bday" value="None">
+   
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done">Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Electronic audiometer">
+        <input type="hidden" name="it" value="aa073531">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+    <td>  <input type="text" name="time required" value="None">
+    <td>  <input type="text" name="Spare parts replaced" value="None">
+    <td>  <input type="text" id="signature" name="signature" value="None">
+    <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+       <td> Balance device </td>
+    <td> afx21 </td>
+  
+        <td>  <input type="text" name="bday" value="None">
+   
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done">Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Balance device">
+        <input type="hidden" name="it" value="afx21 ">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+      <td>  <input type="text" name="time required" value="None">
+      <td>  <input type="text" name="Spare parts replaced" value="None">
+      <td>  <input type="text" id="signature" name="signature" value="None">
+      <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+    <td> Autoclave sterilization</td>
+    <td> without 0003 </td>
+  
+        <td>  <input type="text" name="bday" value="None">
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done">Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Autoclave sterilization">
+        <input type="hidden" name="it" value="without 0003">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td>  <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+    <td>  <input type="text" name="time required" value="None">
+    <td>  <input type="text" name="Spare parts replaced" value="None">
+    <td>  <input type="text" id="signature" name="signature" value="None">
+    <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+    <td> Flexible laryngoscope</td>
+    <td>without 0125 </td>
+  
+        <td>  <input type="text" name="bday" value="None">
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done">Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Flexible laryngoscope">
+        <input type="hidden" name="it" value="without 0125">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+    <td>  <input type="text" name="time required" value="None">
+    <td>  <input type="text" name="Spare parts replaced" value="None">
+    <td>  <input type="text" id="signature" name="signature" value="None">
+    <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+<tr>
+     <td> Audiometric device</td>
+    <td > SN0923976</td>
+  
+        <td>  <input type="text" name="bday" value="None">
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done">Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Audiometric device">
+        <input type="hidden" name="it" value="SN0923976">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+    <td>  <input type="text" name="time required" value="None">
+    <td>  <input type="text" name="Spare parts replaced" value="None">
+    <td>  <input type="text" id="signature" name="signature" value="None">
+    <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+  <tr>
+    <td> Cochlear Excavator Motor</td>
+    <td>Entc77967</td>
+    <td>  <input type="text" name="bday" value="None">
+  <td>  <select id="cars" name="maintenance">
+          <option  value="Not Done"> Not Done</option>
+          <option  value="Done">Done</option>
+        </select>
+        <input type="hidden" name="item" value="Cochlear Excavator Motor">
+        <input type="hidden" name="it" value="Entc77967">
+   <td>  <select id="cars" name="Failure">
+          <option  value="None">None</option>
+          <option  value="found">found</option>
+          <option  value="Not found">Not found</option>
+        </select>
+     <td>  <input type="text" name="Description of equipment failure" value="None">
+     <td> <input type="text" id="lname" name="Cause of failure(if know)" value="None">
+    <td>  <input type="text" name="Part of machine to be maintained" value="None">
+    <td>  <input type="text" name="time required" value="None">
+    <td>  <input type="text" name="Spare parts replaced" value="None">
+    <td>  <input type="text" id="signature" name="signature" value="None">
+    <td>  <input type="text" id="comment" name="comment" value="None"></td>
+  </tr>
+    </table><br><br>
+ <input type="submit" value="Submit">
+  

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML Links</title>
+   </head>
+
+   <body class="loggedin">
+    <nav class="navtop">
+      <div>
+        <a href="http://127.0.0.1:5000"><i class="fas fa-home"></i>Back to Home</a>
+      </div>
+      <div>
+        <h1>Dental Department</h1>
+      </div>
+      <div>>
+      <a href="http://127.0.0.1:5000/inspection">Daily Inspection Form</a><br><br>
+    </div>
+    <div>>
+      <a href="{{ url_for('.download_report') }}">Generate Daily Inspection Report</a><br><br>
+    </div>
+      <div>>
+        <a href="http://127.0.0.1:5000/view_equip_dental"><i class="fas fa-home"></i>Dental Equipment</a>
+      </div>
+  </nav>
+   </body>
+</html>

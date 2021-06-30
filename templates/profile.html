@@ -1,0 +1,30 @@
+
+<h2>Profile Page</h2>
+<div>
+    <a href="http://127.0.0.1:5000">Back to Home</a> <br><br>
+    <p>Your account details are below:</p>
+    <table border="1">
+        <style>
+        body{
+            background-image: url("../static/doc.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }</style>
+        <thead>
+                <tr>
+                    {% for rh in data.header %}
+                    <th>{{ rh }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for r in data.rec %}
+                <tr>
+                    {% for l in r %}
+                    <td>{{ l }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</div>

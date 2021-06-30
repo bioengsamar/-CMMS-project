@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+    <form action="/Risk_Assess_clinics" method="POST">
+
+<h2>Risk Assessment Form </h2>
+
+<table>
+  <tr>
+  	<th rowspan="3">Department</th>  
+    <th rowspan="3"><CENTER>Equipment Type</CENTER></th>      
+    <th rowspan="3"><CENTER>serial Num.</CENTER></th>
+    <th rowspan="3"><CENTER>Done or Not</CENTER></th>
+    <th rowspan="3"><CENTER>Name & signature of assesor</CENTER></th>
+    <th rowspan="3"><CENTER>Date of assesment</CENTER></th>
+    <th colspan="39"><P><CENTER>Score of each Assesment Criteria</CENTER></th>
+    <th colspan="5" rowspan="3"><CENTER>Total Score = A + B + (C+D+E)/3</CENTER></th>
+    <th colspan="25"><P><CENTER>Inventory Classification Result</CENTER></th>
+
+  </tr>
+
+  <tr>
+
+    <th colspan="11"><CENTER>A. Equipment Function</CENTER></th>
+    <th></th>
+    <th colspan="6"><CENTER>B. Risk associated with equipment failure</CENTER></th>
+    <th></th>
+    <th colspan="6"><CENTER>C. Preventive maintenance requirement</CENTER></th>
+    <th></th>
+    <th colspan="6"><CENTER>D. Likelihood of failure (mean time between failures)</CENTER></th>
+    <th></th>
+    <th colspan="6"><CENTER>E. Main area of equipment use</CENTER></th> 
+    <th colspan="5" rowspan="2"><CENTER>High risk (score 18 to 20)</CENTER></th>
+    <th colspan="5" rowspan="2"><CENTER>Medium risk (score 15 to 17)</CENTER></th>
+    <th colspan="5" rowspan="2"><CENTER>Low risk (score 12 to 14)</CENTER></th>
+    <th colspan="5" rowspan="2"><CENTER>Hazard surveillance (<12)</CENTER></th>
+    <th colspan="5" rowspan="2"><CENTER>None</CENTER></th>
+
+
+  </tr>
+
+  <tr>
+    	<th><CENTER>Therapeutic-life support=10</CENTER></th> 
+    	<th><CENTER>Therapeutic-surgical or intensive care=9</CENTER></th>
+    	<th><CENTER>Therapeuti-physical therapy or treatment=8</CENTER></th>
+    	<th><CENTER>Diagnostic-surgical ot intensive care moniroring=7</CENTER></th>
+    	<th><CENTER>Diagnostic-other physiological monitoring=6</CENTER></th>
+    	<th><CENTER>Analytical-laboratory analytical=5</CENTER></th>
+    	<th><CENTER>Analytical-laboratory accessories=4</CENTER></th>
+    	<th><CENTER>Analytical-computer and related=3</CENTER></th>
+    	<th><CENTER>Miscellaneous-patient related=2</CENTER></th>
+    	<th><CENTER>Miscellaneous-non-patient related=1</CENTER></th>
+        <th><CENTER>None</CENTER></th>
+    <th>
+    	<th><CENTER>Potential patient death=5</CENTER></th> 
+    	<th><CENTER>Potential patient injury=4</CENTER></th>
+    	<th><CENTER>Inappropriate therapy or misdiagnosis=3</CENTER></th>
+    	<th><CENTER>Equipment damage=2 </CENTER></th>
+    	<th><CENTER>No significant identified risk=1</CENTER></th>
+        <th><CENTER>None</CENTER></th>
+    </th>
+    <th>
+      <th><CENTER>Monthly=5</CENTER></th> 
+      <th><CENTER>Quarterly=4</CENTER></th>
+      <th><CENTER>Semi-annually=3</CENTER></th>
+      <th><CENTER>Annually=2</CENTER></th>
+      <th><CENTER>Not required=1 </CENTER></th>
+      <th><CENTER>None</CENTER></th>
+     </th> 
+     <th>
+      <th><CENTER>Less than three months=5</CENTER></th> 
+      <th><CENTER>Approximately 4 to 6 months=4</CENTER></th>
+      <th><CENTER>Approximately 7 months to 1 year=3</CENTER></th>
+      <th><CENTER>Approximately 1 to 3 years=2</CENTER></th>
+      <th><CENTER>Approximately > 3 years=1</CENTER></th>
+      <th><CENTER>None</CENTER></th>
+    </th>
+    <th>
+      <th><CENTER>Anesthesia/Surgical care locations=5</CENTER></th> 
+      <th><CENTER>Critical/Intensive care locations=4</CENTER></th>
+      <th><CENTER>Labs/Exam areas=3</CENTER></th>
+      <th><CENTER>General care areas=2</CENTER></th>
+      <th><CENTER>Non-patient areas=1</CENTER></th>
+      <th><CENTER>None</CENTER></th>
+     </th>
+
+  </tr>
+
+  <tr>
+    <td> Heart clinic </td>
+    <input type="hidden" name="Department" value="Heart clinic">
+    <td> ECG </td>
+    <input type="hidden" name="Equipment" value="ECG">
+    <td> 070.12247 </td>
+    <input type="hidden" name="serial" value="070.12247">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+
+  <tr>
+    <td> Dermatology clinic </td>
+    <input type="hidden" name="Department" value="Dermatology clinic">
+    <td> Cryotherapy </td>
+    <input type="hidden" name="Equipment" value="Cryotherapy">
+    <td> L147957 </td>
+    <input type="hidden" name="serial" value="L147957">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+
+    <tr>
+    <td> Obstetrics and Gynaecology clinic </td>
+    <input type="hidden" name="Department" value="Obstetrics and Gynaecology clinic">
+    <td> Doppler </td>
+    <input type="hidden" name="Equipment" value="Doppler">
+    <td> US414A0128 </td>
+    <input type="hidden" name="serial" value="US414A0128">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+
+    <tr>
+    <td> Dermatology clinic</td>
+    <input type="hidden" name="Department" value="Dermatology clinic">
+    <td> UV device </td>
+    <input type="hidden" name="Equipment" value="UV device">
+    <td> 05859-13 </td>
+    <input type="hidden" name="serial" value="05859-13">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+
+    <tr>
+    <td> Chest diseases clinic </td>
+    <input type="hidden" name="Department" value="Chest diseases clinic">
+    <td> thoracoscope </td>
+    <input type="hidden" name="Equipment" value="thoracoscope">
+    <td> EB1970TK </td>
+    <input type="hidden" name="serial" value="EB1970TK">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+
+    <tr>
+    <td> Psychological and neurological clinic </td>
+    <input type="hidden" name="Department" value="Psychological and neurological clinic">
+    <td> EMG </td>
+    <input type="hidden" name="Equipment" value="EMG">
+    <td> 19216817171 </td>
+    <input type="hidden" name="serial" value="19216817171">
+    <td>  <select id="cars" name="maintenance">
+            <option  value="Not Done">Not Done</option>
+            <option  value="Done">Done</option>
+          </select>
+    <td> <input type="text" id="lname" name="signature"><br><br></td>
+    <td> <input type="text" id="lname" name="Date"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-life support=10"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeutic-surgical or intensive care=9"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Therapeuti-physical therapy or treatment=8"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-surgical ot intensive care moniroring=7"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Diagnostic-other physiological monitoring=6"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory analytical=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-laboratory accessories=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Analytical-computer and related=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-patient related=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="Miscellaneous-non-patient related=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Equipment Function" value="None"><br><br></td>
+    <td></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient death=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Potential patient injury=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Inappropriate therapy or misdiagnosis=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="Equipment damage=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="No significant identified risk=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Risk associated with equipment failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Monthly=5"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Quarterly=4"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Semi-annually=3"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Annually=2"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="Not required=1"><br><br></td>
+    <td> <input type="checkbox" id="lname" name="Preventive maintenance requirement" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Likelihood of failure" value="Less than three months=5"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 4 to 6 months=4"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 7 months to 1 year=3"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately 1 to 3 years=2"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="Approximately > 3 years=1"><br><br></td>
+    <td> <input type="checkbox" name="Likelihood of failure" value="None"><br><br></td>
+    <td></td>  
+    <td> <input type="checkbox" name="Main area of equipment use" value="Anesthesia/Surgical care locations=5"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Critical/Intensive care locations=4"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Labs/Exam areas=3"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="General care areas=2"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="Non-patient areas=1"><br><br></td>
+    <td> <input type="checkbox" name="Main area of equipment use" value="None"><br><br></td>
+    <th colspan="5"> <input type="text" id="lname" name="Total"><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="High risk (score 18 to 20)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Medium risk (score 15 to 17)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Low risk (score 12 to 14)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="Hazard surveillance (<12)"></CENTER><br><br></td>
+    <td colspan="5"><CENTER><input type="checkbox" name="Inventory" value="None"></CENTER><br><br></td>
+    </tr>
+  
+</table>
+ <input type="submit" value="Submit">
+</form>

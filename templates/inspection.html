@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>  REPORT OF DOCTOR OR ENGINEER </title>
+	<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 2px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<form action="/inspection" method="POST">
+
+<table>
+	
+<tr>
+	
+<th>
+	
+	Type
+</th>
+<th>
+	
+	Specific
+</th>
+
+<th>
+	Items to be checked
+</th>
+<th>
+	Yes
+</th>
+<th>
+	
+No
+</th>
+
+<th>
+	Engineer Signature
+</th>
+</tr>
+<tr>
+	
+<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Triage 
+	<input type="hidden" name="specific" value="Triage">
+</td>
+ <td>
+ 	Does the facility have a triage area with qualified nurses ?
+ 	<input type="hidden" name="item" value="Does the facility have a triage area with qualified nurses ?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+
+</tr>
+<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Triage 
+	<input type="hidden" name="specific" value="Triage">
+</td>
+ <td>
+ 	Is it located at the first point of contact with patients?
+ 	<input type="hidden" name="item" value="Is it located at the first point of contact with patients?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+
+<tr>
+	
+<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Triage 
+	<input type="hidden" name="specific" value="Triage">
+</td>
+ <td>
+ 	Is there a standard operating procedure for triage?
+ 	<input type="hidden" name="item" value="Is there a standard operating procedure for triage?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+</tr>
+<tr>
+	<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Triage 
+	<input type="hidden" name="specific" value="Triage">
+</td>
+ <td>
+ 	Is there a system for coding patients?
+ 	<input type="hidden" name="item" value="Is there a system for coding patients?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+</tr>
+
+
+
+<tr>
+<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Examination Room 
+	<input type="hidden" name="specific" value="Examination Room ">
+</td>
+ <td>
+ 	Does the examination room have a coach and a mackintosh?
+ 	<input type="hidden" name="item" value="Does the examination room have a coach and a mackintosh?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+
+<tr>
+	
+<td>
+
+	General
+	<input type="hidden" name="type" value="General">
+</td>
+<td>
+	
+	Examination room
+	<input type="hidden" name="specific" value="Examination Room ">
+</td>
+ <td>
+ 	Does the room have a consultation table with at least two chairs?
+ 	<input type="hidden" name="item" value="Does the room have a consultation table with at least two chairs?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="vehicle1" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+</tr>
+<tr>
+	<td>
+
+	 General
+	 <input type="hidden" name="type" value="General ">
+</td>
+<td>
+	
+	Examination room
+	<input type="hidden" name="specific" value="Examination Room ">
+</td>
+ <td>
+ 	Does the room have a pedal bin and stepper?
+ 	<input type="hidden" name="item" value="Does the room have a pedal bin and stepper?">
+ </td>
+<td>
+	
+	<input type="checkbox" name="check" value="Yes">
+</td>
+
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+
+<td>
+	<input type="text" id="lname" name="signature"><br><br></td>
+</td>
+
+</tr>
+
+
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a thermometer available?
+		<input type="hidden" name="item" value="Is a thermometer available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a blood pressure (BP) machine available/accessible?
+		<input type="hidden" name="item" value="Is a blood pressure (BP) machine available/accessible?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a stethoscope available?
+		<input type="hidden" name="item" value="Is a stethoscope available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a tongue depressor available?
+		<input type="hidden" name="item" value="Is a tongue depressor available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a weighing scale available/accessible?
+		<input type="hidden" name="item" value="Is a weighing scale available/accessible?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a torch available?
+		<input type="hidden" name="item" value="Is a torch available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a privacy screen available?
+		<input type="hidden" name="item" value="Is a privacy screen available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Examination Equipment
+		<input type="hidden" name="specific" value="Examination Equipment">
+	</td>
+	<td>
+		Is a diagnostic set available?
+		<input type="hidden" name="item" value="Is a diagnostic set available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+		Emergency tray and equipment
+		<input type="hidden" name="specific" value="Emergency tray and equipment">
+	</td>
+	<td>
+		Does the facility have an emergency tray available at designated sites?
+		<input type="hidden" name="item" value="Does the facility have an emergency tray available at designated sites?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+
+<tr>
+	
+<td>
+	General</td>
+	<input type="hidden" name="type" value="General ">
+	<td>
+	Emergency tray and equipment
+	<input type="hidden" name="specific" value="Emergency tray and equipment">
+	</td>
+	<td>
+		Is there a checklist for regular review and updates to the emergency tray?
+		<input type="hidden" name="item" value="Is there a checklist for regular review and updates to the emergency tray?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+
+
+
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+	Hygiene protocol
+	<input type="hidden" name="specific" value="Hygiene protocol">
+	</td>
+
+	<td>
+			Is there a hygiene protocol with a dedicated staff roster available?
+			<input type="hidden" name="item" value="Is there a hygiene protocol with a dedicated staff roster available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+	hand washing
+	<input type="hidden" name="specific" value="hand washing">
+	</td>
+	<td>
+		Is a sink present with running water from a tap or modified storage container?
+		<input type="hidden" name="item" value="Is a sink present with running water from a tap or modified storage container?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+	hand washing
+	<input type="hidden" name="specific" value="hand washing">
+	</td>
+	<td>
+		Is soap available at the hand washing area?
+		<input type="hidden" name="item" value="Is soap available at the hand washing area?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+solid waste management	</td>
+<input type="hidden" name="specific" value="solid waste management">
+	<td>
+		Are there standard operating procedures for waste management?
+		<input type="hidden" name="item" value="Are there standard operating procedures for waste management?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+solid waste management	</td>
+<input type="hidden" name="specific" value="solid waste management">
+	<td>
+		Are there at least two color-coded bins (Red, black and/or yellow)?
+		<input type="hidden" name="item" value="Are there at least two color-coded bins (Red, black and/or yellow)?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+solid waste management	</td>
+<input type="hidden" name="specific" value="solid waste management">
+	<td>
+		Are there coded lining bags that match the color of the bins?
+		<input type="hidden" name="item" value="Are there coded lining bags that match the color of the bins?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+use of disenfectants	</td>
+<input type="hidden" name="specific" value="use of disenfectants">
+	<td>
+		Is there evidence of disinfectant use?
+		<input type="hidden" name="item" value="Is there evidence of disinfectant use?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+use of disenfectants	</td>
+<input type="hidden" name="specific" value="use of disenfectants">
+	<td>
+		Are you able to observe disinfectant containers used for cleaning?
+		<input type="hidden" name="item" value="Are you able to observe disinfectant containers used for cleaning?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+protective equipment	</td>
+<input type="hidden" name="specific" value="protective equipment">
+	<td>
+		Are gowns or dust coats available?
+		<input type="hidden" name="item" value="Are gowns or dust coats available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+<tr>
+	
+<td>
+	Infection prevention and control</td>
+	<input type="hidden" name="type" value="Infection prevention and control">
+	<td>
+protective equipment	</td>
+<input type="hidden" name="specific" value="protective equipment">
+	<td>
+		Are gloves available?
+		<input type="hidden" name="item" value="Are gloves available?">
+	</td>
+ <td><input type="checkbox" name="check" value="Yes">
+ 	
+ </td>
+<td>
+	<input type="checkbox" name="check" value="No">
+</td>
+<td>
+	<input type="text" id="lname" name="signature"><br><br>
+</td>
+</tr>
+
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+</table><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

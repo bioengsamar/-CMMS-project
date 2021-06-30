@@ -1,0 +1,32 @@
+show all database
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Equipments</title>
+	</head>
+	<body>
+		<br><br>
+		<a href="http://127.0.0.1:5000">Back to Home</a>
+		<h1>Equipments </h1>
+		<table border="1">
+			<thead>
+				<tr>
+					{% for rh in data.header %}
+					<th>{{ rh }}</th>
+					{% endfor %}
+				</tr>
+			</thead>
+			<tbody>
+				{% for r in data.rec %}
+				<tr>
+					{% for l in r %}
+					<td>{{ l }}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</body>
+
+</html>
